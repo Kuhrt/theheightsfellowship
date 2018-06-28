@@ -1,5 +1,14 @@
 /** Colors */
-$brand-primary:         #525ddc;
+// $blue: #33ade3;
+$blue: rgba(51, 173, 227, 1);
+$white: rgba(247, 240, 245, 1);
+$cream: rgba(238, 224, 203, 1);
+$black: rgba(23, 29, 28, 1);
+$grey: rgba(77, 80, 87, 1);
 
-/** Box Model  */
-$spacer:                2rem;
+/** Fonts  */
+$font: 'Montserrat', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+
+/** Box model */
+$spacer: 2px;

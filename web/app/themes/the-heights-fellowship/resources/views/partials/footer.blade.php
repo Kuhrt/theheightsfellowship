@@ -1,5 +1,4 @@
 <footer class="content-info">
-  <div class="container">
-    @php dynamic_sidebar('sidebar-footer') @endphp
-  </div>
+  @php dynamic_sidebar('sidebar-footer') @endphp
+  <p class="copyright">&copy; The Heights Fellowship</p>
 </footer>
