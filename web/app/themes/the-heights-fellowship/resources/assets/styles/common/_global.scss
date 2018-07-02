@@ -10,9 +10,15 @@ html {
 
 html,
 body {
+  position: relative;
   background-color: $white;
   color: $black;
   font-family: $font-secondary;
+  width: 100%;
+}
+
+body {
+  padding-top: 5rem;
 }
 
 h1,

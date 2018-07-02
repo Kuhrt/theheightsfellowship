@@ -1,2 +1,110 @@
-// TODO: .banner .nav li {}
-// TODO: .banner .nav a {}
+header.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: $page-margin $page-margin 0;
+
+  &.active {
+    background-color: $white;
+  }
+
+  a.brand {
+    display: block;
+    margin-bottom: $page-margin;
+
+    .logo {
+      width: 2.5rem;
+    }
+
+    .logo-words {
+      display: none;
+    }
+  }
+
+  nav.nav-primary {
+    // display: none;
+    background-color: $white;
+    width: 100%;
+    min-height: calc(100vh - 5rem);
+
+    ul#menu-main-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        position: relative;
+        padding: $page-margin 0;
+        border-top: 0.0625rem solid rgba($black, 0.5);
+
+        &.active {
+          &.menu-item-has-children {
+            &::before {
+              content: '';
+              transform: translateY(-50%) rotate(45deg);
+            }
+
+            &::after {
+              content: '';
+              transform: translateY(-50%) rotate(135deg);
+            }
+          }
+        }
+
+        &.menu-item-has-children {
+          &::before,
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 2.1875rem;
+            right: 0;
+            transform: translateY(-50%);
+            transform-style: preserve-3d;
+            background-color: $blue;
+            width: 1.5rem;
+            height: 0.375rem;
+            transition: all 0.3s ease-out;
+          }
+
+          &::after {
+            content: '';
+            transform: translateY(-50%) rotate(90deg);
+          }
+        }
+
+        a {
+          color: rgba($black, 0.5);
+          font-family: $font;
+          font-size: 1.875rem;
+          font-weight: 500;
+          line-height: 1;
+          text-decoration: none;
+        }
+
+        ul.sub-menu {
+          display: block;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          overflow: hidden;
+
+          li {
+            border: none;
+            padding: 1.25rem 0 0;
+            opacity: 0;
+
+            &:first-child {
+              padding-top: 1.75rem;
+            }
+
+            a {
+              font-size: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

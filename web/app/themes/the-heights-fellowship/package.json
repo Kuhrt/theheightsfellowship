@@ -103,6 +103,7 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
+    "gsap": "^2.0.1",
     "jquery": "^3.3.1"
   }
 }

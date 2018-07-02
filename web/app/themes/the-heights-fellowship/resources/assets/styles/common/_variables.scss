@@ -11,4 +11,9 @@ $font: 'Montserrat', sans-serif;
 $font-secondary: 'Open Sans', sans-serif;
 
 /** Box model */
-$spacer: 2px;
+$spacer: 0.125rem;
+
+/** Margins */
+$page-margin: 1.25rem;
+$page-margin-tablet: 2.5rem;
+$page-margin-desktop: 5rem;
