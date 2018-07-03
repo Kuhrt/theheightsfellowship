@@ -6,6 +6,7 @@ export default {
 
     // Hiding submenus when the page loads
     $(window).load(function() {
+      $('nav.nav-primary').show();
       $('li.menu-item.menu-item-has-children').each(function() {
         const subMenu = $(this).find('ul.sub-menu');
         const menuHeight = subMenu.height();
@@ -16,6 +17,27 @@ export default {
         $(this).find('ul.sub-menu').animate({'height': '0px'}, 0, function() {
           $(this).find('ul.sub-menu').css('height', '0px');
         });
+      });
+      $('nav.nav-primary').hide();
+    });
+
+    // Toggling menu on hamburger click
+    $('.banner__hamburger').on('click', function() {
+      // Toggling the active class
+      $('.banner').toggleClass('active');
+      $('.banner__hamburger').toggleClass('active');
+
+      // Toggling the navigation
+      $('nav.nav-primary').fadeToggle(function() {
+        if ($('.banner').hasClass('active')) {
+          $('nav.nav-primary').animate({
+            'opacity': 1,
+          }, 1);
+        } else {
+          $('nav.nav-primary').animate({
+            'opacity': 0,
+          }, 0.25);
+        }
       });
     });
 

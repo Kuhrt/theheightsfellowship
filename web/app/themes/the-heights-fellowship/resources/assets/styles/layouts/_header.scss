@@ -5,12 +5,16 @@ header.banner {
   width: 100%;
   padding: $page-margin $page-margin 0;
 
+  @media (min-width: $breakpoint-tablet) {
+    padding: $page-margin $page-margin-tablet 0;
+  }
+
   &.active {
     background-color: $white;
   }
 
   a.brand {
-    display: block;
+    display: inline-block;
     margin-bottom: $page-margin;
 
     .logo {
@@ -22,11 +26,67 @@ header.banner {
     }
   }
 
+  .banner__hamburger {
+    position: absolute;
+    top: 1.675rem;
+    right: $page-margin;
+    width: 2rem;
+    height: 1.65rem;
+    z-index: 2;
+
+    @media (min-width: $breakpoint-tablet) {
+      right: $page-margin-tablet;
+    }
+
+    &.active {
+      span {
+        &:nth-child(1) {
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          width: 0%;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    span {
+      position: absolute;
+      left: 0;
+      background-color: $blue;
+      width: 100%;
+      height: 0.33rem;
+      transition: all 0.3s ease-out;
+
+      &:nth-child(1) {
+        top: 0;
+        transform-origin: top left;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+        transform-origin: bottom left;
+      }
+    }
+  }
+
   nav.nav-primary {
-    // display: none;
+    display: none;
+    position: relative;
     background-color: $white;
     width: 100%;
-    min-height: calc(100vh - 5rem);
+    max-height: calc(100vh - 5rem);
+    overflow-y: scroll;
+    z-index: 1;
 
     ul#menu-main-menu {
       list-style: none;
@@ -40,15 +100,14 @@ header.banner {
 
         &.active {
           &.menu-item-has-children {
-            &::before {
-              content: '';
-              transform: translateY(-50%) rotate(45deg);
-            }
-
             &::after {
               content: '';
-              transform: translateY(-50%) rotate(135deg);
+              transform: translateY(-50%) rotate(180deg);
             }
+          }
+
+          & > a {
+            color: rgba($black, 1);
           }
         }
 
