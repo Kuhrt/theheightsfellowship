@@ -1,0 +1,46 @@
+.thf__page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  text-align: center;
+  min-height: 75vh;
+  padding: 5rem $page-margin;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 5rem $page-margin-tablet;
+  }
+
+  @media (min-width: $breakpoint-tablet-large) {
+    padding: 8.5rem 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 8.5rem $page-margin-desktop;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba($black, 0.5);
+    width: 100%;
+    height: 100%;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 {
+    color: $white;
+  }
+}

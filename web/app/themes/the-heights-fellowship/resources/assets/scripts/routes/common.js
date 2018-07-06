@@ -1,4 +1,5 @@
 import {TweenMax, TimelineLite} from "gsap"; // eslint-disable-line no-unused-vars
+// import "jquery-parallax.js";
 
 export default {
   init() {

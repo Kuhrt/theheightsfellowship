@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html @php language_attributes() @endphp>
   @include('partials.head')
   <body @php body_class() @endphp>

@@ -4,6 +4,8 @@ header.banner {
   left: 0;
   width: 100%;
   padding: $page-margin $page-margin 0;
+  transition: all 0.3s ease-out;
+  z-index: 10;
 
   @media (min-width: $breakpoint-tablet) {
     padding: $page-margin $page-margin-tablet 0;
@@ -24,6 +26,7 @@ header.banner {
 
   &.active {
     background-color: $white;
+    min-height: 100vh;
   }
 
   a.brand {
@@ -87,6 +90,8 @@ header.banner {
 
     &.active {
       span {
+        background-color: $blue;
+
         &:nth-child(1) {
           transform: rotate(45deg);
         }
@@ -104,7 +109,7 @@ header.banner {
     span {
       position: absolute;
       left: 0;
-      background-color: $blue;
+      background-color: $white;
       width: 100%;
       height: 0.33rem;
       transition: all 0.3s ease-out;
@@ -212,6 +217,7 @@ header.banner {
 
           @media (min-width: $breakpoint-tablet-large) {
             display: block;
+            color: $white;
             font-size: 1.25rem;
             padding: $page-margin 1rem;
             border-top-left-radius: 0.75rem;
@@ -300,7 +306,7 @@ header.banner {
 
               &:hover {
                 @media (min-width: $breakpoint-tablet-large) {
-                  background-color: $black;
+                  background-color: $grey;
                   color: $blue;
                   padding: 1rem 1rem 1rem 1.5rem;
                 }

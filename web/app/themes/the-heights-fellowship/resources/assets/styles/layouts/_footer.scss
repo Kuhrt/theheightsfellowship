@@ -5,6 +5,7 @@ footer {
   color: lighten($grey, 40%);
   text-align: center;
   padding: $page-margin;
+  z-index: 1;
 
   &::after {
     content: '';
@@ -39,8 +40,8 @@ footer {
         content: '';
         border-color: $blue;
         border-width: 0.125rem;
-        width: 80%;
-        height: 80%;
+        width: 85%;
+        height: 85%;
       }
     }
 

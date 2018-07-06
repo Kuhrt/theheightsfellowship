@@ -17,15 +17,6 @@ body {
   width: 100%;
 }
 
-body {
-  padding-top: 5rem;
-
-  @media (min-width: $breakpoint-tablet-large) {
-    padding-top: 8.5rem;
-    background-color: $cream;
-  }
-}
-
 h1,
 h2,
 h3,
@@ -37,10 +28,60 @@ h6 {
   font-weight: 700;
 }
 
+h1 {
+  font-size: 3.375rem;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 5.75rem;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 6.5rem;
+  }
+}
+
+div.content {
+  padding: 0 $page-margin;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 0 $page-margin-tablet;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 0 $page-margin-desktop;
+  }
+}
+
+p {
+  a {
+    color: $blue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 a {
   transition: all 0.3s;
 
   &:hover {
     color: $blue;
+  }
+
+  &.button {
+    display: inline-block;
+    color: $blue;
+    font-family: $font;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    border: 0.0625rem solid $blue;
+
+    &:hover {
+      color: $white;
+      background-color: $blue;
+      text-decoration: none;
+    }
   }
 }
