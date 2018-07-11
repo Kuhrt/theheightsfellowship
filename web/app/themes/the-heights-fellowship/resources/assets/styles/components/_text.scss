@@ -1,4 +1,6 @@
 p {
+  margin: 1.25rem 0;
+
   a {
     color: $blue;
     text-decoration: none;
@@ -20,11 +22,15 @@ a {
 button,
 a.button {
   display: inline-block;
+  background-color: $white;
   color: $blue;
   font-family: $font;
   font-size: 1.25rem;
+  width: auto;
   padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
   border: 0.0625rem solid $blue;
+  border-top-left-radius: 0.5rem;
   transition: all 0.3s;
 
   &:hover {
@@ -35,7 +41,76 @@ a.button {
   }
 }
 
-// TODO: ul, ol
-// TODO: blockquote
-// TODO: code, pre
-// TODO: figure
+ul,
+ol {
+  li {
+    line-height: 1.33;
+  }
+}
+
+blockquote {
+  position: relative;
+  font-size: 150%;
+  font-weight: 700;
+  margin: 2rem 0;
+
+  &::before {
+    content: '\201C';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $blue;
+    font-family: $font;
+    font-size: 400%;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.33;
+    z-index: 1;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+code,
+pre {
+  background-color: lighten($grey, 55%);
+  padding: 0.0625rem 0.2rem;
+  border: 0.0625rem solid lighten($grey, 33%);
+  border-radius: 0.125rem;
+}
+
+figure {
+  display: block;
+  width: 100%;
+  margin: 1.25rem 0;
+
+  @media (min-width: $breakpoint-desktop) {
+    float: left;
+    width: auto;
+    margin: 1.25rem 2.5rem 1.25rem 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  figcaption {
+    font-size: 90%;
+    font-style: italic;
+    padding: 0.25rem 0;
+
+    @media (min-width: $breakpoint-desktop) {
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+  }
+}
+
+hr {
+  display: block;
+  margin: 2rem 0;
+  border: 0.0625rem solid $grey;
+}

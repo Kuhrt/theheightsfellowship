@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 *,
@@ -31,5 +32,19 @@ div.content {
   main {
     max-width: 62.5rem;
     margin: 0 auto;
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  img {
+    border-top-left-radius: 1.75rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      border-top-left-radius: 2.5rem;
+    }
   }
 }
