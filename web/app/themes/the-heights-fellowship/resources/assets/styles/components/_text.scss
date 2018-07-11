@@ -1,0 +1,41 @@
+p {
+  a {
+    color: $blue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+a {
+  transition: all 0.3s;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+button,
+a.button {
+  display: inline-block;
+  color: $blue;
+  font-family: $font;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  border: 0.0625rem solid $blue;
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    color: $white;
+    background-color: $blue;
+    text-decoration: none;
+  }
+}
+
+// TODO: ul, ol
+// TODO: blockquote
+// TODO: code, pre
+// TODO: figure

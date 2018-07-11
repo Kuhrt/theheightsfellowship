@@ -1,0 +1,22 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
+  font-family: $font;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.375rem;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 5.75rem;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 6.5rem;
+  }
+}

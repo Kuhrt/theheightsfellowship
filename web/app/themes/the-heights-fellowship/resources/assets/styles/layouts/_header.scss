@@ -1,5 +1,5 @@
 header.banner {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -15,7 +15,6 @@ header.banner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
     padding: $page-margin-tablet $page-margin-tablet;
     z-index: 100;
   }
@@ -27,6 +26,15 @@ header.banner {
   &.active {
     background-color: $white;
     min-height: 100vh;
+
+    a.brand {
+      .logo,
+      .logo-words {
+        .st0 {
+          fill: $blue;
+        }
+      }
+    }
   }
 
   a.brand {
@@ -56,6 +64,10 @@ header.banner {
         display: inline-block;
         width: 3.5rem;
       }
+
+      .st0 {
+        fill: $white;
+      }
     }
 
     .logo-words {
@@ -68,6 +80,10 @@ header.banner {
         opacity: 0;
         transform: translateY(0.33rem);
         transition: all 0.3s ease-out;
+      }
+
+      .st0 {
+        fill: $white;
       }
     }
   }
@@ -93,7 +109,7 @@ header.banner {
         background-color: $blue;
 
         &:nth-child(1) {
-          transform: rotate(45deg);
+          transform: rotate(-45deg);
         }
 
         &:nth-child(2) {
@@ -101,14 +117,14 @@ header.banner {
         }
 
         &:nth-child(3) {
-          transform: rotate(-45deg);
+          transform: rotate(45deg);
         }
       }
     }
 
     span {
       position: absolute;
-      left: 0;
+      right: 0;
       background-color: $white;
       width: 100%;
       height: 0.33rem;
@@ -116,7 +132,7 @@ header.banner {
 
       &:nth-child(1) {
         top: 0;
-        transform-origin: top left;
+        transform-origin: top right;
       }
 
       &:nth-child(2) {
@@ -126,7 +142,7 @@ header.banner {
 
       &:nth-child(3) {
         bottom: 0;
-        transform-origin: bottom left;
+        transform-origin: bottom right;
       }
     }
   }
