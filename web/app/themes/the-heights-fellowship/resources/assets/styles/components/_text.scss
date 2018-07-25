@@ -20,7 +20,8 @@ a {
 }
 
 button,
-a.button {
+a.button,
+input[type="submit"] {
   display: inline-block;
   background-color: $white;
   color: $blue;
