@@ -23,7 +23,7 @@ header.banner {
     padding: $page-margin-tablet $page-margin-desktop;
   }
 
-  &.active {
+  &.is-active {
     background-color: $white;
     min-height: 100vh;
 
@@ -104,7 +104,7 @@ header.banner {
       display: none;
     }
 
-    &.active {
+    &.is-active {
       span {
         background-color: $blue;
 
@@ -180,7 +180,7 @@ header.banner {
           border-top: none;
         }
 
-        &.active {
+        &.is-active {
           &.menu-item-has-children {
             &::after {
               content: '';
@@ -246,7 +246,7 @@ header.banner {
             }
           }
 
-          &.active {
+          &.is-active {
             background-color: $white;
           }
         }
@@ -272,7 +272,7 @@ header.banner {
             opacity: 0;
           }
 
-          &.active {
+          &.is-active {
             @media (min-width: $breakpoint-tablet-large) {
               height: auto;
               opacity: 1;

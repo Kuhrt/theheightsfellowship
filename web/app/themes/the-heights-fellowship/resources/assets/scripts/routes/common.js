@@ -27,13 +27,13 @@ export default {
     } else { // DESKTOP MENU FUNCTIONALITY
       $('.menu-item-has-children').on('mouseenter', function(e) {
         e.preventDefault();
-        $(this).addClass('active');
-        $(this).find('ul.sub-menu').addClass('active');
+        $(this).addClass('is-active');
+        $(this).find('ul.sub-menu').addClass('is-active');
       });
       $('.menu-item-has-children').on('mouseleave', function(e) {
         e.preventDefault();
-        $(this).removeClass('active');
-        $(this).find('ul.sub-menu').removeClass('active');
+        $(this).removeClass('is-active');
+        $(this).find('ul.sub-menu').removeClass('is-active');
       });
     }
   },
@@ -65,13 +65,13 @@ function hideMobileSubmenus() {
  * Toggles the menu on mobile devices
  */
 function toggleMobileMenu() {
-  // Toggling the active class
-  $('.banner').toggleClass('active');
-  $('.banner__hamburger').toggleClass('active');
+  // Toggling the is-active class
+  $('.banner').toggleClass('is-active');
+  $('.banner__hamburger').toggleClass('is-active');
 
   // Toggling the navigation
   $('nav.nav-primary').fadeToggle(function() {
-    if ($('.banner').hasClass('active')) {
+    if ($('.banner').hasClass('is-active')) {
       $('nav.nav-primary').animate({
         'opacity': 1,
       }, 1);
@@ -89,15 +89,15 @@ function toggleMobileMenu() {
  * @param {Object} $menuitem - The menu item that was clicked
  */
 function toggleMobileSubmenu($menuitem) {
-  // If the menu item is not active
-  if (!$menuitem.hasClass('active')) {
+  // If the menu item is not is-active
+  if (!$menuitem.hasClass('is-active')) {
     const navTl = new TimelineLite();
     const subMenu = $menuitem.find('ul.sub-menu');
     const subMenuItems = subMenu.find('li');
     const menuHeight = subMenu.data('height');
 
-    // Adding active to the menu item
-    $menuitem.addClass('active');
+    // Adding is-active to the menu item
+    $menuitem.addClass('is-active');
 
     // Animating the menu in
     navTl.to(subMenu, 0.25, {height: menuHeight + 'px'});
@@ -113,7 +113,7 @@ function toggleMobileSubmenu($menuitem) {
     navTl.to(subMenuItems, 0.125, {opacity: 0});
     navTl.to(subMenu, 0.25, {height: '0px'});
 
-    // Removing active to the menu item
-    $menuitem.removeClass('active');
+    // Removing is-active to the menu item
+    $menuitem.removeClass('is-active');
   }
 }
