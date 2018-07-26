@@ -9,12 +9,57 @@ form {
   }
 
   @media (min-width: $breakpoint-desktop) {
-    width: 50%;
+    width: 65%;
   }
 
   & > p {
     @media (min-width: $breakpoint-tablet) {
       margin-bottom: 2rem;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  fieldset {
+    padding: 0;
+    margin-bottom: 1.5rem;
+    border: none;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-bottom: 2.125rem;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-bottom: 3rem;
+    }
+
+    & > * {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    legend {
+      font-family: $font;
+      font-size: 1.625rem;
+      font-weight: 700;
+      line-height: 1;
+
+      @media (min-width: $breakpoint-tablet) {
+        font-size: 2rem;
+      }
+    }
+
+    & > p {
+      @media (min-width: $breakpoint-tablet) {
+        margin-bottom: 2rem;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        margin-bottom: 3rem;
+      }
     }
   }
 
@@ -60,10 +105,18 @@ form {
     &[type="radio"],
     &[type="checkbox"] {
       margin-bottom: 0.5rem;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     &[name="style-acceptance"] {
       margin-right: 1.5rem;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
@@ -86,6 +139,16 @@ form {
 
     &:focus {
       outline: $blue;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    option {
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
