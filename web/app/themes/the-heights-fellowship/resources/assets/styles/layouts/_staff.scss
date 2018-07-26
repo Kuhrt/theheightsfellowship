@@ -4,14 +4,14 @@
   justify-content: space-between;
   position: relative;
   width: 100%;
-  padding: $page-margin 0;
+  padding: $page-margin 0 0.75rem;
 
   @media (min-width: $breakpoint-tablet) {
-    padding: $page-margin-tablet 0;
+    padding: $page-margin-tablet 0 1.5rem;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    padding: $page-margin-desktop 0;
+    padding: $page-margin-desktop 0 1.5rem;
   }
 
   .thf-staff__member {
