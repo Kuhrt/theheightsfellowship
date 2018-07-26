@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  background-color: $blue;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,6 +34,12 @@
     background-color: rgba($black, 0.35);
     width: 100%;
     height: 100%;
+  }
+
+  &.no-photo {
+    &::after {
+      opacity: 0;
+    }
   }
 
   & > * {

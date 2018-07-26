@@ -1,0 +1,62 @@
+.thf__staff {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  padding: $page-margin 0;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: $page-margin-tablet 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: $page-margin-desktop 0;
+  }
+
+  .thf-staff__member {
+    position: relative;
+    text-align: center;
+    width: 47%;
+    margin-bottom: 2rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 45%;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (min-width: $breakpoint-tablet-large) {
+      width: 30%;
+      margin-bottom: 3.125rem;
+    }
+
+    img {
+      position: relative;
+      width: 100%;
+    }
+
+    h3,
+    p {
+      text-align: left;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin: 0.5rem 0 0.25rem;
+
+      a {
+        color: $black;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1;
+      margin: 0;
+    }
+  }
+}

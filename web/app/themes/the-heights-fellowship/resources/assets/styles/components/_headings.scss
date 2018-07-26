@@ -9,6 +9,16 @@ h6 {
   font-family: $font;
   font-weight: 700;
   margin: 2.75rem 0 1.25rem;
+
+  a {
+    color: $blue;
+    transition: all 0.3s;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($blue, 13%);
+    }
+  }
 }
 
 h1 {
