@@ -12,13 +12,15 @@ html {
 html,
 body {
   position: relative;
-  background-color: $white;
+  // background-color: $white;
+  background: transparent;
   color: $black;
   font-family: $font-secondary;
   width: 100%;
 }
 
 div.content {
+  background-color: $white;
   padding: 0 $page-margin;
 
   @media (min-width: $breakpoint-tablet) {

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
+@include('partials.page-header')
 @section('content')
-  @include('partials.page-header')
 
   @if (!have_posts())
     <div class="alert alert-warning">

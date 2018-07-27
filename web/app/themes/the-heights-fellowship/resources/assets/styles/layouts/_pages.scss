@@ -4,14 +4,16 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: $blue;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-color: $blue;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background: transparent;
   color: $white;
   text-align: center;
   min-height: 75vh;
   padding: 5rem $page-margin;
+  z-index: 2;
 
   @media (min-width: $breakpoint-tablet) {
     padding: 5rem $page-margin-tablet;
@@ -37,6 +39,8 @@
   }
 
   &.no-photo {
+    background-color: $blue;
+
     &::after {
       opacity: 0;
     }

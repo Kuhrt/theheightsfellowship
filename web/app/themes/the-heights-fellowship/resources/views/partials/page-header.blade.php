@@ -5,7 +5,8 @@
     $thumb_url = $thumb_url_array[0];
   @endphp
 
-  <div class="thf__page-header" style="background-image:url('@php echo $thumb_url @endphp');">
+  <!-- <div class="thf__page-header" style="background-image:url('@php echo $thumb_url @endphp');"> -->
+  <div class="thf__page-header" data-parallax="scroll" data-speed="0.5" data-image-src="@php echo $thumb_url @endphp");>
 @else
   <div class="thf__page-header no-photo">
 @endif

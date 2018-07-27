@@ -6,6 +6,9 @@
     ],
     "customizer": [
       "./scripts/customizer.js"
+    ],
+    "parallax": [
+      "./scripts/parallax.js"
     ]
   },
   "publicPath": "/app/themes/the-heights-fellowship",
