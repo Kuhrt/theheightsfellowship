@@ -31,7 +31,16 @@ div.content {
 
   main {
     max-width: 62.5rem;
+    padding: $page-margin 0;
     margin: 0 auto;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding: $page-margin-tablet 0;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      padding: $page-margin-desktop 0;
+    }
 
     @media (min-width: $breakpoint-desktop-large) {
       max-width: 75rem;

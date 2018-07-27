@@ -102,8 +102,15 @@ figure {
 
   @media (min-width: $breakpoint-desktop) {
     float: left;
+    clear: both;
     width: auto;
     margin: 1.25rem 2.5rem 1.25rem 0;
+  }
+
+  &.aligncenter {
+    @media (min-width: $breakpoint-desktop) {
+      float: none;
+    }
   }
 
   img {
