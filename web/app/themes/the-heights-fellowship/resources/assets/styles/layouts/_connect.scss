@@ -3,6 +3,8 @@ body.connect {
     padding: 0;
 
     main.main {
+      padding: 0;
+
       @media (min-width: $breakpoint-tablet-large) {
         max-width: 100%;
         margin: 0;
@@ -10,6 +12,7 @@ body.connect {
 
       @media (min-width: $breakpoint-desktop) {
         max-width: 62.5rem;
+        padding: $page-margin-desktop 0;
         margin: 0 auto;
       }
 
