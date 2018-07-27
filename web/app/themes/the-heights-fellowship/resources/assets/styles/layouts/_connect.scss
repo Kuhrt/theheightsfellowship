@@ -1,0 +1,178 @@
+body.connect {
+  div.content {
+    padding: 0;
+
+    main.main {
+      @media (min-width: $breakpoint-tablet-large) {
+        max-width: 100%;
+        margin: 0;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        max-width: 62.5rem;
+        margin: 0 auto;
+      }
+
+      @media (min-width: $breakpoint-desktop-large) {
+        max-width: 75rem;
+      }
+    }
+  }
+}
+
+section.thf__connect {
+  @media (min-width: $breakpoint-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .thf-connect__page {
+    display: flex;
+    position: relative;
+    text-decoration: none;
+
+    @media (min-width: $breakpoint-desktop) {
+      display: block;
+      width: 32%;
+      margin-right: 2%;
+      margin-bottom: 2%;
+    }
+
+    &:hover {
+      .thf-connect-page__image {
+        .thf-connect-page-image__bg {
+          @media (min-width: $breakpoint-desktop) {
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      .thf-connect-page__title {
+        h3 {
+          &::after {
+            @media (min-width: $breakpoint-desktop) {
+              content: '';
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &:nth-child(3n) {
+      @media (min-width: $breakpoint-desktop) {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(even) {
+      .thf-connect-page__title {
+        order: -1;
+      }
+    }
+
+    .thf-connect-page__image {
+      position: relative;
+      width: 50%;
+      z-index: 1;
+
+      @media (min-width: $breakpoint-desktop) {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: relative;
+        width: 100%;
+        padding-top: 100%;
+
+        @media (min-width: $breakpoint-desktop) {
+          background-color: rgba($grey, 0.5);
+          z-index: 2;
+        }
+      }
+
+      .thf-connect-page-image__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transition: all 1s ease-in-out;
+
+        @media (min-width: $breakpoint-desktop) {
+          z-index: 1;
+        }
+      }
+    }
+
+    .thf-connect-page__title {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 50%;
+      padding: $page-margin;
+      z-index: 2;
+
+      @media (min-width: $breakpoint-tablet) {
+        padding: $page-margin-tablet;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: $page-margin;
+      }
+
+      h3 {
+        position: relative;
+        font-size: 1.25rem;
+        line-height: 1;
+        padding-bottom: 0.75rem;
+        margin: 0;
+        z-index: 2;
+
+        @media (min-width: $breakpoint-tablet) {
+          font-size: 2.375rem;
+          padding-bottom: 1rem;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+          color: $white;
+          font-size: 1.875rem;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: $blue;
+          width: 6rem;
+          height: 0.125rem;
+          transition: all 1s ease-in-out;
+
+          @media (min-width: $breakpoint-tablet) {
+            width: 13rem;
+            height: 0.25rem;
+          }
+
+          @media (min-width: $breakpoint-desktop) {
+            width: 8rem;
+            height: 0.25rem;
+          }
+        }
+      }
+    }
+  }
+}
