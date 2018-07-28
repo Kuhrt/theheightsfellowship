@@ -44,10 +44,6 @@ div.content {
       padding: $page-margin-desktop 0;
     }
 
-    @media (min-width: $breakpoint-desktop-large) {
-      max-width: 75rem;
-    }
-
     &::after {
       content: "";
       display: table;

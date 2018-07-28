@@ -1,0 +1,209 @@
+body.home {
+  div.content {
+    background: transparent;
+    padding: 0;
+
+    main.main {
+      background: transparent;
+      max-width: 100%;
+      padding: 0;
+
+      & > section {
+        background-color: $white;
+
+        & > * {
+          max-width: 62.5rem;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+
+      .thf-home__connect {
+        .thf-home-connect__text {
+          padding: $page-margin $page-margin 0;
+
+          @media (min-width: $breakpoint-tablet) {
+            padding: $page-margin $page-margin-tablet 0;
+          }
+
+          @media (min-width: $breakpoint-desktop) {
+            padding: $page-margin $page-margin-desktop 0;
+          }
+        }
+
+        .thf-home-connect__pages {
+          display: flex;
+          padding: 0 0 $page-margin;
+          min-width: 100%;
+
+          @media (min-width: $breakpoint-tablet) {
+            padding: 0 0 $page-margin-tablet;
+          }
+
+          @media (min-width: $breakpoint-desktop) {
+            padding: 2rem 0 4rem;
+          }
+
+          .thf-home-connect-pages__page {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            position: relative;
+            width: 50%;
+            padding: 0 $page-margin;
+            border-right: 0.0625rem solid lighten($grey, 40%);
+
+            @media (min-width: $breakpoint-tablet) {
+              padding: 0 $page-margin-tablet;
+            }
+
+            @media (min-width: $breakpoint-desktop) {
+              width: 25%;
+            }
+
+            &:nth-child(3),
+            &:nth-child(4) {
+              display: none;
+
+              @media (min-width: $breakpoint-desktop) {
+                display: block;
+              }
+            }
+
+            &:nth-child(2) {
+              border-right: none;
+
+              @media (min-width: $breakpoint-desktop) {
+                border-right: 0.0625rem solid lighten($grey, 40%);
+              }
+            }
+
+            &:last-child {
+              border-right: none;
+            }
+
+            h4 {
+              position: relative;
+              font-size: 1.125rem;
+              line-height: 1;
+              text-align: left;
+              padding-bottom: 0.75rem;
+              margin: 0 0 0.75rem;
+
+              @media (min-width: $breakpoint-tablet) {
+                font-size: 1.75rem;
+              }
+
+              @media (min-width: $breakpoint-desktop) {
+                font-size: 1.5rem;
+              }
+
+              &:hover {
+                &::after {
+                  content: '';
+                  width: 100%;
+                }
+              }
+
+              &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: $blue;
+                width: 50%;
+                height: 0.125rem;
+                transition: all 0.3s ease-in-out;
+              }
+
+              a {
+                color: $black;
+
+                &:hover {
+                  color: $blue;
+                }
+              }
+            }
+
+            .thf-home-connect-pages-page__image {
+              display: block;
+              position: relative;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              width: 100%;
+
+              &::after {
+                content: '';
+                display: block;
+                position: relative;
+                width: 100%;
+                padding-top: 50%;
+              }
+            }
+          }
+        }
+      }
+
+      .thf-home__services {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background: transparent;
+        // background: url('../images/sunrise.jpg') right top no-repeat;
+        // background-size: cover;
+        width: 100%;
+        min-height: 80vh;
+        padding: $page-margin;
+
+        @media (min-width: $breakpoint-tablet) {
+          padding: $page-margin $page-margin-tablet;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+          padding: $page-margin $page-margin-desktop;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: $grey;
+          width: 100%;
+          height: 100%;
+          opacity: 0.5;
+          z-index: 1;
+        }
+
+        h2,
+        h3,
+        h4,
+        p {
+          position: relative;
+          color: $white;
+          text-align: center;
+          width: 100%;
+          z-index: 2;
+        }
+      }
+
+      .thf-home__content {
+        padding: $page-margin;
+
+        @media (min-width: $breakpoint-tablet) {
+          padding: $page-margin $page-margin-tablet;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+          padding: $page-margin $page-margin-desktop;
+        }
+      }
+    }
+  }
+}
