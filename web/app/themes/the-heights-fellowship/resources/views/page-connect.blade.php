@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @while(have_posts()) @php the_post() @endphp
-  @include('partials.page-header')
   @section('content')
     @php
       $loop = new WP_Query( array( 'post_type' => 'connect', 'posts_per_page' => -1 ) );
