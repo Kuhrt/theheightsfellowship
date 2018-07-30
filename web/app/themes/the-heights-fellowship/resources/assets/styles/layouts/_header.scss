@@ -13,7 +13,7 @@ header.banner {
 
   @media (min-width: $breakpoint-tablet-large) {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: $page-margin-tablet $page-margin-tablet;
     z-index: 100;
@@ -34,6 +34,10 @@ header.banner {
           fill: $blue;
         }
       }
+    }
+
+    nav.nav-secondary {
+      display: none;
     }
   }
 
@@ -146,6 +150,8 @@ header.banner {
       }
     }
   }
+
+  // TODO: .nav-container {}
 
   nav.nav-primary {
     display: none;
@@ -333,4 +339,6 @@ header.banner {
       }
     }
   }
+
+  // TODO: nav.nav-secondary {}
 }
