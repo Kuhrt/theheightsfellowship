@@ -27,11 +27,16 @@
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
+
+// Components
+@import "components/fancy-list";
+
 // Pages
 @import "layouts/pages";
 @import "layouts/home";
 @import "layouts/staff";
 @import "layouts/connect";
+
 // Posts
 @import "layouts/posts";
 @import "layouts/tinymce";
