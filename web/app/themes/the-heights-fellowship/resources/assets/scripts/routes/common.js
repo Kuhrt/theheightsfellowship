@@ -35,6 +35,15 @@ export default {
           freeScroll: true,
           pageDots: false,
           prevNextButtons: false,
+          on: {
+            ready: function() {
+              let flkty = this;
+
+              setTimeout(function() {
+                flkty.reposition();
+              }, 100);
+            },
+          },
         });
       }
     } else { // DESKTOP MENU FUNCTIONALITY

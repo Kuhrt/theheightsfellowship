@@ -388,11 +388,15 @@ header.banner {
       display: block;
       position: relative;
       list-style: none;
-      width: 60%;
+      width: 100%;
       padding: 0;
       margin: 0;
       overflow: hidden;
       white-space: nowrap;
+
+      @media (min-width: $breakpoint-tablet) {
+        width: 60%;
+      }
 
       @media (min-width: $breakpoint-desktop) {
         display: flex;
