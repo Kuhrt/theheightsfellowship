@@ -104,6 +104,7 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
+    "flickity": "^2.1.2",
     "google-maps": "^3.3.0",
     "gsap": "^2.0.1",
     "jquery": "^3.3.1",

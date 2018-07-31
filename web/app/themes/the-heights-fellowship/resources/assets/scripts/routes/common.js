@@ -1,5 +1,5 @@
 import {TweenMax, TimelineLite} from "gsap"; // eslint-disable-line no-unused-vars
-// import "jquery-parallax.js";
+import Flickity from "flickity";
 
 export default {
   init() {
@@ -7,16 +7,15 @@ export default {
 
     // MOBILE MENU FUNCTIONALITY
     if ($(window).width() < 900) {
+      // MAIN MENU
       // Hiding submenus when the page loads
       $(window).load(function() {
         hideMobileSubmenus();
       });
-
       // Toggling menu on hamburger click
       $('.banner__hamburger').on('click', function() {
         toggleMobileMenu();
       });
-
       // Watcher for menu item with children
       $('li.menu-item.menu-item-has-children').on('click', function(e) {
         if ($(e.target).closest('ul.sub-menu').length === 0) {
@@ -24,6 +23,20 @@ export default {
           toggleMobileSubmenu($(this));
         }
       });
+
+      // SECONDARY MENU
+      if ($('nav.nav-secondary').length > 0) {
+        // Initializing the slider for the nav
+        // eslint-disable-next-line no-unused-vars
+        const secondNav = new Flickity(document.querySelector('nav.nav-secondary ul.nav'), {
+          percentPosition: false,
+          contain: true,
+          cellAlign: 'left',
+          freeScroll: true,
+          pageDots: false,
+          prevNextButtons: false,
+        });
+      }
     } else { // DESKTOP MENU FUNCTIONALITY
       $('.menu-item-has-children').on('mouseenter', function(e) {
         e.preventDefault();

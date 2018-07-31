@@ -13,6 +13,7 @@ header.banner {
 
   @media (min-width: $breakpoint-tablet-large) {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
     padding: $page-margin-tablet $page-margin-tablet;
@@ -21,6 +22,15 @@ header.banner {
 
   @media (min-width: 1000px) {
     padding: $page-margin-tablet $page-margin-desktop;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    max-width: 100rem;
+  }
+
+  @media (min-width: $breakpoint-desktop-med) {
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   &.is-active {
@@ -168,6 +178,10 @@ header.banner {
       width: auto;
       max-height: 100%;
       overflow: visible;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-bottom: 1rem;
     }
 
     ul#menu-main-menu {
@@ -340,5 +354,82 @@ header.banner {
     }
   }
 
-  // TODO: nav.nav-secondary {}
+  nav.nav-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 1rem;
+    border-top: 0.0625rem solid rgba($white, 0.5);
+
+    @media (min-width: $breakpoint-tablet) {
+      justify-content: space-between;
+    }
+
+    .nav-secondary__title {
+      display: block;
+      font-family: $font;
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1;
+      padding: 0;
+      margin: 0 1.5rem 0 0;
+
+      a {
+        color: lighten($blue, 15%);
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+
+    ul.nav {
+      display: block;
+      position: relative;
+      list-style: none;
+      width: 60%;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+
+      @media (min-width: $breakpoint-desktop) {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: 100%;
+      }
+
+      .flickity-viewport {
+        position: relative;
+      }
+
+      li {
+        display: block;
+        font-weight: 400;
+        line-height: 1.2;
+        margin-right: 1rem;
+
+        @media (min-width: $breakpoint-tablet) {
+          margin-right: 1.5rem;
+        }
+
+        &:last-child {
+          margin-right: 1rem;
+        }
+
+        a {
+          color: lighten($blue, 15%);
+          font-size: $font;
+          font-weight: 700;
+          text-decoration: none;
+
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
 }
