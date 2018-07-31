@@ -78,7 +78,7 @@
 
     @if (has_nav_menu('secondary_navigation'))
     <nav class="nav-secondary">
-      <p class="nav-secondary__title"><a href="#">Students</a></p>
+      <p class="nav-secondary__title"><a href="@php bloginfo('url') @endphp">@php bloginfo('name') @endphp</a></p>
       {!! wp_nav_menu(['theme_location' => 'secondary_navigation', 'menu_class' => 'nav']) !!}
     </nav>
     @endif

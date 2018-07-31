@@ -30,7 +30,6 @@ export default {
         // eslint-disable-next-line no-unused-vars
         const secondNav = new Flickity(document.querySelector('nav.nav-secondary ul.nav'), {
           percentPosition: false,
-          contain: true,
           cellAlign: 'left',
           freeScroll: true,
           pageDots: false,
@@ -41,6 +40,7 @@ export default {
 
               setTimeout(function() {
                 flkty.reposition();
+                flkty.resize();
               }, 100);
             },
           },
