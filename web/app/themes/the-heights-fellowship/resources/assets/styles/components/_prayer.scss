@@ -1,0 +1,150 @@
+#praybox {
+  div.intro {
+    font-size: 1rem;
+    line-height: 1.325;
+    margin: 1.25rem 0;
+  }
+
+  div.back {
+    a {
+      color: $blue;
+      text-decoration: none;
+
+      &:hover {
+        color: darken($blue, 13%);
+      }
+    }
+  }
+
+  table.praybox {
+    tbody {
+      tr {
+        &.pb-titlerow {
+          font-family: $font;
+
+          td {
+            background-color: lighten($grey, 50%);
+            font-size: 1.33rem;
+            font-weight: 700;
+          }
+        }
+
+        td {
+          font-size: 1rem;
+          font-weight: 400;
+          padding: 0.25rem 0.5rem !important;
+
+          &.input {
+            a {
+              color: $blue;
+              text-decoration: none;
+
+              &:hover {
+                color: darken($blue, 13%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div.title {
+    font-size: 2.25rem;
+    margin: 2.5rem 0 1.25rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 3rem;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: 3.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+
+      @media (min-width: $breakpoint-tablet) {
+        font-size: 2.3rem;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        font-size: 2.7rem;
+      }
+    }
+  }
+
+  & > form {
+    @media (min-width: $breakpoint-desktop) {
+      width: 100%;
+    }
+  }
+
+  table.subform {
+    @media (min-width: $breakpoint-desktop) {
+      float: none;
+      margin: 0.75rem auto 0;
+    }
+
+    td {
+      font-size: 1rem;
+      padding: 0.5rem !important;
+
+      @media (min-width: $breakpoint-tablet) {
+        padding: 0.75rem 0.5rem !important;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        padding: 1rem 0.5rem !important;
+      }
+    }
+  }
+
+  input[type="submit"] {
+    font-size: 1rem !important;
+    margin: 0.75rem auto 0;
+  }
+
+  table.details {
+    background-color: lighten($grey, 60%);
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 100%;
+      padding: $page-margin;
+    }
+
+    td {
+      @media (min-width: $breakpoint-tablet) {
+        font-size: 1rem;
+      }
+
+      &.content {
+        form.flag {
+          @media (min-width: $breakpoint-tablet-large) {
+            width: 15%;
+          }
+
+          input[type="submit"] {
+            background-color: $red;
+            border: none;
+            padding: 0.25rem 0.5rem;
+          }
+        }
+      }
+
+      &.response {
+        form {
+          margin-bottom: 0;
+
+          @media (min-width: $breakpoint-tablet-large) {
+            width: 100%;
+          }
+
+          input[type="submit"] {
+            text-transform: none;
+          }
+        }
+      }
+    }
+  }
+}

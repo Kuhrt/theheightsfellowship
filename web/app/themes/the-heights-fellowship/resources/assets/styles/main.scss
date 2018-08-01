@@ -7,7 +7,7 @@
 @import "common/fontawesome/fa-brands.scss";
 
 /** Import everything from autoload */
-@import "./autoload/**/*";
+// @import "./autoload/**/*";
 
 /**
  * Import npm dependencies
@@ -31,6 +31,7 @@
 
 // Components
 @import "components/fancy-list";
+@import "components/prayer";
 
 // Pages
 @import "layouts/pages";

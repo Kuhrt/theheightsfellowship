@@ -37,4 +37,7 @@
       @include('partials.content-page')
     </section>
   @endwhile
+  <section class="thf-home__prayer" data-parallax="scroll" data-speed="0.7" data-image-src="@asset('images/THFBigDay2016.jpg')">
+    @php the_field('home_prayer_section') @endphp
+  </section>
 @endsection
