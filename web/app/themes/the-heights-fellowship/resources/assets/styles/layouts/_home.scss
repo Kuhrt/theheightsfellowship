@@ -12,7 +12,7 @@ body.home {
         background-color: $white;
 
         & > * {
-          max-width: 62.5rem;
+          max-width: 56.25rem;
           margin-right: auto;
           margin-left: auto;
         }
@@ -26,8 +26,8 @@ body.home {
             padding: $page-margin $page-margin-tablet 0;
           }
 
-          @media (min-width: $breakpoint-desktop) {
-            padding: $page-margin $page-margin-desktop 0;
+          @media (min-width: $breakpoint-tablet-large) {
+            padding: $page-margin 0 0;
           }
         }
 

@@ -79,16 +79,6 @@
         width: 45%;
       }
 
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: $blue;
-        width: 100%;
-        height: 0.0625rem;
-      }
-
       & > * {
         &:first-child {
           margin-top: 0;

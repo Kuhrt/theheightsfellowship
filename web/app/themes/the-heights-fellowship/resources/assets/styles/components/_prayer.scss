@@ -97,6 +97,10 @@
       @media (min-width: $breakpoint-desktop) {
         padding: 1rem 0.5rem !important;
       }
+
+      input {
+        margin-top: 0;
+      }
     }
   }
 
@@ -120,6 +124,8 @@
 
       &.content {
         form.flag {
+          margin: 0;
+
           @media (min-width: $breakpoint-tablet-large) {
             width: 15%;
           }
@@ -128,6 +134,7 @@
             background-color: $red;
             border: none;
             padding: 0.25rem 0.5rem;
+            margin-top: 0;
           }
         }
       }
