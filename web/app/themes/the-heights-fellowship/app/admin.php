@@ -34,3 +34,10 @@ add_action('login_enqueue_scripts', function () {
        null
    );
 }, 100);
+
+/**
+ * Admin footer text
+ */
+add_filter('admin_footer_text', function () {
+   echo 'The Heights Fellowship | For support contact: <a href="mailto:kuhrt@kuhrt.codes">Kuhrt Cowan</a>';
+});
