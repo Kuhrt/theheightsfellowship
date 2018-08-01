@@ -1,0 +1,29 @@
+/** Colors */
+// $blue: #33ade3;
+$blue: rgba(51, 173, 227, 1);
+$red: #af1b3f;
+$white: rgba(247, 240, 245, 1);
+$cream: rgba(238, 224, 203, 1);
+$black: rgba(23, 29, 28, 1);
+$grey: rgba(77, 80, 87, 1);
+
+/** Fonts  */
+$font: 'Montserrat', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+
+/** Box model */
+$spacer: 0.125rem;
+
+/** Margins */
+$page-margin: 1.25rem;
+$page-margin-tablet: 2.5rem;
+$page-margin-desktop: 5rem;
+
+/** Breakpoints */
+$breakpoint-tablet: 600px;
+$breakpoint-tablet-large: 900px;
+$breakpoint-desktop: 1200px;
+$breakpoint-desktop-med: 1600px;
+$breakpoint-desktop-large: 1800px;
+$breakpoint-desktop-xl: 2000px;
+$breakpoint-desktop-huge: 2500px;

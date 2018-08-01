@@ -1,0 +1,46 @@
+@import "common/normalize";
+@import "common/variables";
+
+/** Icons */
+@import "common/fontawesome/fontawesome.scss";
+@import "common/fontawesome/fa-regular.scss";
+@import "common/fontawesome/fa-solid.scss";
+@import "common/fontawesome/fa-brands.scss";
+
+/** Import everything from autoload */
+// @import "./autoload/**/*";
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+
+/** Import theme styles */
+@import "common/global";
+@import "common/flickity";
+@import "components/headings";
+@import "components/text";
+@import "components/comments";
+@import "components/forms";
+@import "components/wp-classes";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+
+// Components
+@import "components/fancy-list";
+@import "components/prayer";
+
+// Pages
+@import "layouts/pages";
+@import "layouts/home";
+@import "layouts/staff";
+@import "layouts/connect";
+@import "layouts/about";
+
+// Posts
+@import "layouts/posts";
+@import "layouts/tinymce";
