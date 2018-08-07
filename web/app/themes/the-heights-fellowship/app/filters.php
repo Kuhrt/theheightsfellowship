@@ -73,3 +73,11 @@ add_filter('comments_template', function ($comments_template) {
  * Turn the admin bar on/off front facing pages
  */
 add_filter('show_admin_bar', '__return_false');
+
+/**
+ * Add the API key for Google Maps in Advanced Custom Fields
+ */
+add_filter('acf/fields/google_map/api', function ($api) {
+	$api['key'] = 'AIzaSyCuD2J2grKa4cFLf9GzAHAx_qqizVN38fs';
+	return $api;
+});
