@@ -23,6 +23,18 @@ body.lifegroups-template {
   }
 }
 
+.thf-life-groups__content {
+  padding: 1rem $page-margin;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: 1rem $page-margin-tablet;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 2rem 0;
+  }
+}
+
 section.thf__life-groups {
   @media (min-width: $breakpoint-desktop) {
     display: flex;
