@@ -13,6 +13,10 @@ use Roots\Sage\Template\BladeProvider;
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_script('sage/parallax.min.js', asset_path('scripts/parallax.js'), ['jquery'], null, true);
+    // Loading eventOn calendar javascript
+    if (is_page('calendar')) {
+      wp_enqueue_script('sage/eventon.js', plugins_url() . '/eventon-api/eventon.js?ver=1.0.2', ['jquery'], null, true);
+    }
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 }, 100);
 
