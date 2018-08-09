@@ -1,0 +1,29 @@
+.ajde_evcal_calendar {
+  .calendar_header {
+    .evcal_arrows {
+      i.fa {
+        @include fa-icon;
+
+        @extend .fas;
+
+        font-weight: 900;
+      }
+
+      &.evcal_btn_prev {
+        i.fa {
+          &::before {
+            content: fa-content($fa-var-angle-left);
+          }
+        }
+      }
+
+      &.evcal_btn_next {
+        i.fa {
+          &::before {
+            content: fa-content($fa-var-angle-right);
+          }
+        }
+      }
+    }
+  }
+}
