@@ -67,7 +67,7 @@ body.home {
               display: none;
 
               @media (min-width: $breakpoint-desktop) {
-                display: block;
+                display: flex;
               }
             }
 

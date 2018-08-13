@@ -17,11 +17,13 @@ body {
   color: $black;
   font-family: $font-secondary;
   width: 100%;
+  overflow-x: hidden;
 }
 
 div.content {
   background-color: $white;
   padding: 0 $page-margin;
+  overflow-x: hidden;
 
   @media (min-width: $breakpoint-tablet) {
     padding: 0 $page-margin-tablet;
