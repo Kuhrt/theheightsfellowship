@@ -12,5 +12,23 @@
   <meta name="theme-color" content="#ffffff">
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Open+Sans:400,400i,700,700i" rel="stylesheet">
+  <?php if ( is_front_page() ) { ?>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-843258612"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('event', 'conversion', {'send_to': 'AW-843258612/Zzi-CK_l-XsQ9LWMkgM'});
+    </script>
+  <?php } elseif(is_page( 'contact' )) { ?>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-843258612"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-843258612');
+    </script>
+  <?php } ?>
   @php wp_head() @endphp
 </head>
