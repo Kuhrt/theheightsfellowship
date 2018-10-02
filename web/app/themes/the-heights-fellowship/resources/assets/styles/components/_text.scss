@@ -30,7 +30,7 @@ input[type="submit"] {
   font-family: $font;
   font-size: 1.25rem;
   width: auto;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem !important;
   margin-bottom: 1rem;
   border: 0.0625rem solid $blue;
   border-top-left-radius: 0.5rem;
