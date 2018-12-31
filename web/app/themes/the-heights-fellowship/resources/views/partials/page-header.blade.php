@@ -7,6 +7,9 @@
 
   <div class="thf__page-header parallax-window" data-parallax="scroll" data-speed="0.2" data-image-src="@php echo $thumb_url @endphp">
     <h1>{!! App::title() !!}</h1>
+    @if (get_field('home_header_subtitle'))
+      <p>@php the_field('home_header_subtitle') @endphp</p>
+    @endif
   </div>
 @else
   <div class="thf__page-header no-photo">
