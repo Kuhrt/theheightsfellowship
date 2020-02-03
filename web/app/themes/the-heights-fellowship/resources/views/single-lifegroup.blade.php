@@ -8,7 +8,7 @@
         <li><span>Leaders:</span> @php the_field('lifegroup_leaders') @endphp</li>
         <li><span>Age Range:</span> @php the_field('lifegroup_age_range') @endphp</li>
         <li><span>Time:</span> @php the_field('lifegroup_time') @endphp</li>
-        <li><span>Location:</span> @php the_field('lifegroup_meeting_locations') @endphp</li>
+        <li><span>Location:</span> @php the_field('lifegroup_meeting_location') @endphp</li>
       </ul>
     </section>
   @endsection

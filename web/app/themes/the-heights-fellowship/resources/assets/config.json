@@ -13,7 +13,7 @@
   },
   "publicPath": "/app/themes/the-heights-fellowship",
   "devUrl": "http://theheightsfellowship.test",
-  "proxyUrl": "http://localhost:3000",
+  "proxyUrl": "http://localhost:3000//theheightsfellowship.test",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
     "app/**/*.php",
