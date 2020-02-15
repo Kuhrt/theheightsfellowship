@@ -52,7 +52,7 @@ export default {
       });
 
       $('#eventoncontent').evoCalendar({
-        api: 'http://www5.theheightsfellowship.org/wp-json/eventon/calendar?event_type=' + pageCategory,
+        api: 'https://www.theheightsfellowship.org/wp-json/eventon/calendar?event_type=' + pageCategory,
         calendar_url: '',
         new_window: false,
         loading_text: 'Loading Calendar...',
