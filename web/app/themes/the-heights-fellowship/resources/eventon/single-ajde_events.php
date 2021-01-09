@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-  <?php //do_action('eventon_before_main_content'); ?>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -19,6 +18,7 @@
   </head>
   <body <?php body_class(); ?>>
     <?php do_action('get_header'); ?>
+    <?php do_action('eventon_before_main_content'); ?>
     <header class="banner">
       <a class="brand" href="/">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" class="logo" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
