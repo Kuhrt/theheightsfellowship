@@ -9,7 +9,7 @@ export default {
     if ($(window).width() < 900) {
       // MAIN MENU
       // Hiding submenus when the page loads
-      $(window).load(function() {
+      $(window).on('load', function() {
         hideMobileSubmenus();
       });
       // Toggling menu on hamburger click
@@ -27,8 +27,7 @@ export default {
       // SECONDARY MENU
       if ($('nav.nav-secondary').length > 0) {
         // Initializing the slider for the nav
-        // eslint-disable-next-line no-unused-vars
-        const secondNav = new Flickity(document.querySelector('nav.nav-secondary ul.nav'), {
+        new Flickity(document.querySelector('nav.nav-secondary ul.nav'), {
           percentPosition: false,
           cellAlign: 'left',
           freeScroll: true,

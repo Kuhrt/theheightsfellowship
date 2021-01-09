@@ -9,7 +9,7 @@ export default {
     if ($(window).width() < 900) {
       // MAIN MENU
       // Hiding submenus when the page loads
-      $(window).load(function() {
+      $(window).on('load', function() {
         hideMobileSubmenus();
       });
       // Toggling menu on hamburger click

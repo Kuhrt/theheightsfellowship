@@ -20,6 +20,10 @@ body {
   overflow-x: hidden;
 }
 
+.grecaptcha-badge {
+  opacity: 0;
+}
+
 div.content {
   background-color: $white;
   padding: 0 $page-margin;
